@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Login from "./Login/Login";
+import Register from "./Register/Register";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 function App() {
+  const [page, setPage] = useState("login");
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {/** DOM Manipulation using state */}
+      {page === "login" && <Login registerAction={() => setPage("register")} />}
+      {page === "register" && <Register loginAction={() => setPage("login")} />}
+
+      {/** DOM Manipulation using Routing */}
+      {/* <Router>
+        <Switch>
+          <Route path="/" component={Login} exact />
+          <Route path="/register" component={Register} exact />
+        </Switch>
+      </Router> */}
     </div>
   );
 }
