@@ -61,7 +61,7 @@ const Register = ({ loginAction }) => {
           <p>
             Already have an account?{" "}
             {/** Parent's state manipulation using callback func  */}
-            <span
+            {/* <span
               style={{
                 textDecoration: "underline",
                 color: "#0000ff",
@@ -70,9 +70,9 @@ const Register = ({ loginAction }) => {
               onClick={() => loginAction()}
             >
               Click Here
-            </span>
-            .{/** Link to "/"  */}
-            {/* <Link to="/">Click Here</Link> */}
+            </span> */}
+            {/** Link to "/"  */}
+            <Link to="/">Click Here</Link>
           </p>
         </div>
       </form>

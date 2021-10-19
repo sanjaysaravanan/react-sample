@@ -47,7 +47,7 @@ const Login = ({ registerAction }) => {
           <span className={styles.psw}>
             New Registration{" "}
             {/** Parent's state manipulation using callback func  */}
-            <span
+            {/* <span
               style={{
                 textDecoration: "underline",
                 color: "#0000ff",
@@ -56,9 +56,9 @@ const Login = ({ registerAction }) => {
               onClick={() => registerAction()}
             >
               Click Here
-            </span>
+            </span> */}
             {/** Link to "/register" */}
-            {/* <Link to="/register">Click Here</Link> */}
+            <Link to="/register">Click Here</Link>
           </span>
         </div>
       </form>
